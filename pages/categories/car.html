@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car</title>
+  <link href="../../files/fontawesome/css/all.min.css" rel="stylesheet" />
+  <link href="../../css/style.css" rel="stylesheet" />
+  <link href="../../css/category.css" rel="stylesheet" />
+</head>
+
+<body class="flex-row flex-center">
+  <main class="flex-row half">
+    <div class="container flex-col flex-center flex-grow-1">
+      <div class="mySlides">
+        <div class="numbertext">1 / 4</div>
+        <img src="../../files/images/מתלה לרכב.png" alt="מתלה לרכב">
+      </div>
+      <div class="mySlides">
+        <div class="numbertext">2 / 4</div>
+        <img src="../../files/images/מיני חולצה לרכב.png" alt="מיני חולצה לרכב">
+      </div>
+      <div class="mySlides">
+        <div class="numbertext">3 / 4</div>
+        <img src="../../files/images/מתלה לרכב.png" alt="מתלה לרכב">
+      </div>
+      <div class="mySlides">
+        <div class="numbertext">4 / 4</div>
+        <img src="../../files/images/מיני חולצה לרכב.png" alt="מיני חולצה לרכב">
+      </div>
+      <div class="row flex-row">
+        <div class="column">
+          <img class="demo cursor" onclick="currentSlide(1)" src="../../files/images/מתלה לרכב.png" alt="מתלה לרכב">
+        </div>
+        <div class="column">
+          <img class="demo cursor" onclick="currentSlide(2)" src="../../files/images/מיני חולצה לרכב.png" alt="מיני חולצה לרכב">
+        </div>
+        <div class="column">
+          <img class="demo cursor" onclick="currentSlide(3)" src="../../files/images/מתלה לרכב.png" alt="מתלה לרכב">
+        </div>
+        <div class="column">
+          <img class="demo cursor" onclick="currentSlide(4)" src="../../files/images/מיני חולצה לרכב.png" alt="מיני חולצה לרכב">
+        </div>
+      </div>
+    </div>
+    <form class="flex-col">
+      <h1>שם מוצר</h1>
+      <div class="flex-col flex-space flex-grow-1">
+        <label for="car1" class="radio-container flex-row">
+          <input type="radio" name="p-name" id="car1">
+          <span class="checkmark"></span>
+          <span class="flex-col flex-center">מתלה לרכב</span>
+        </label>
+        <label for="car2" class="radio-container flex-row">
+          <input type="radio" name="p-name" id="car2">
+          <span class="checkmark"></span>
+          <span class="flex-col flex-center">מיני חולצה לרכב</span>
+        </label>
+        <label for="car3" class="radio-container flex-row">
+          <input type="radio" name="p-name" id="car3">
+          <span class="checkmark"></span>
+          <span class="flex-col flex-center">מתלה לרכב</span>
+        </label>
+        <label for="car4" class="radio-container flex-row">
+          <input type="radio" name="p-name" id="car4">
+          <span class="checkmark"></span>
+          <span class="flex-col flex-center">מיני חולצה לרכב</span>
+        </label>
+      </div>
+      <div class="flex-col flex-center flex-grow-1">
+        <button type="button">הוסף לסל</button>
+      </div>
+    </form>
+  </main>
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("demo");
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
+  </script>
+</body>
+
+</html>

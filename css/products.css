@@ -1,0 +1,96 @@
+main {
+    height: 100vh;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: var(--second-color);
+    height: 100%;
+    text-align: center;
+}
+
+.sidebar a {
+    display: block;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.column img {
+    width: 75%;
+    border-radius: 10%;
+    box-shadow: -7px 5px;
+}
+
+.sidebar a:hover {
+    background-color: var(--main-color);
+}
+
+div.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+}
+
+/* Create three equal columns that sits next to each other */
+.column {
+    padding: 10px;
+    flex-basis: 25%;
+}
+
+iframe {
+    height: 100%;
+    width: 100%;
+}
+
+.submit {
+    color: var(--main-color);
+    font-size: 25px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media screen and (max-width: 1024px) {
+    .column {
+        flex-basis: 33%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .column {
+        flex-basis: 50%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    main {
+        flex-direction: column;
+    }
+
+    footer {
+        flex-direction: column;
+        position: unset;
+        height: 150px;
+    }
+
+    .sidebar a {
+        color: var(--second-color);
+    }
+
+    .sidebar {
+        width: auto;
+        flex-direction: row;
+        height: auto;
+        font-size: 15px;
+        flex-wrap: wrap;
+        background-color: white;
+        justify-content: center;
+    }
+
+    .sidebar a:hover {
+        background-color: var(--main-color);
+    }
+
+    .column {
+        flex-basis: 80%;
+    }
+}

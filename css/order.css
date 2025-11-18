@@ -1,0 +1,91 @@
+input,
+button {
+  padding: 10px 15px;
+  margin: 8px 0;
+  width: 20%;
+  min-width: 200px;
+  outline-color: var(--second-color);
+}
+
+button {
+  align-self: flex-start;
+}
+
+p {
+  line-height: 1.25;
+}
+
+main {
+  height: 100vh;
+}
+
+div:has(video) {
+  height: 100vh;
+}
+
+video {
+  position: fixed;
+  width: 40%;
+}
+
+.half {
+  max-width: 80%;
+  min-width: 50%;
+}
+
+.grid-container {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.half > * {
+  width: 80%;
+}
+
+img {
+  width: 60%;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: -3px 3px;
+}
+
+ul {
+  padding: 0;
+  line-height: 1.5;
+  margin: 0;
+  justify-content: center;
+}
+
+li span {
+  color: var(--second-color);
+  font-weight: bold;
+}
+
+@media screen and (max-width: 700px) {
+  main.grid-container {
+    grid-template-columns: 1fr;
+    align-items: center;
+    font-size: smaller;
+  }
+
+  div:has(video) {
+    display: none !important;
+  }
+
+  input:not(input[type=radio]) {
+    width: 35%;
+  }
+
+  button {
+    width: 35%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  input:not(input[type=radio]) {
+    width: 40%;
+  }
+
+  button {
+    width: 40%;
+  }
+}

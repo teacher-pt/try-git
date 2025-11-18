@@ -1,0 +1,101 @@
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+  margin-left: 50px;
+  width: 0;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  /* top: 0; */
+  direction: ltr;
+}
+
+/* Container for image text */
+.caption-container {
+  width: 30%;
+  text-align: center;
+  background-color: var(--main-color);
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+.half {
+  width: 40%;
+  height: 100%;
+}
+
+form>div {
+  margin: 5px auto;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  color: var(--second-color);
+  text-align: center;
+}
+
+button::before {
+  content: "\f07a";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+
+@media screen and (max-width: 900px) {
+  .half {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .half {
+    width: 100%;
+    padding: 0px 10px;
+  }
+
+  form .flex-grow-1 {
+    flex-grow: 0;
+  }
+
+  .container {
+    margin: 0;
+  }
+
+  h1 {
+    font-size: medium;
+  }
+}

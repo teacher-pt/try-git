@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PICABOO</title>
+    <link href="../../files/fontawesome/css/all.min.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <link href="../css/order.css" rel="stylesheet" />
+</head>
+
+<body>
+    <main class="grid-container">
+        <div class="flex-row flex-center">
+            <div class="half">
+                <div class="flex-col">
+                    <div class="grid-container">
+                        <img src="../files/images/בלוק זכוכית.png" alt="בלוק זכוכית">
+                        <ul class="flex-col">
+                            <li><span>גודל:</span> 20*30</li>
+                            <li><span>מחיר:</span> 120 ש"ח</li>
+                            <li><span>כמות:</span> 2</li>
+                            <li><span>סה"כ:</span> 240 ש"ח</li>
+                        </ul>
+                    </div>
+                    <div class="grid-container">
+                        <img src="../files/images/חולצה.png" alt="חולצה">
+                        <ul class="flex-col">
+                            <li><span>מידה:</span> M</li>
+                            <li><span>מחיר:</span> 40 ש"ח</li>
+                            <li><span>כמות:</span> 1</li>
+                            <li><span>סה"כ:</span> 40 ש"ח</li>
+                        </ul>
+                    </div>
+                    <div class="grid-container">
+                        <img src="../files/images/בלוק זכוכית.png" alt="בלוק זכוכית">
+                        <ul class="flex-col">
+                            <li><span>גודל:</span> 20*30</li>
+                            <li><span>מחיר:</span> 120 ש"ח</li>
+                            <li><span>כמות:</span> 2</li>
+                            <li><span>סה"כ:</span> 240 ש"ח</li>
+                        </ul>
+                    </div>
+                </div>
+                <form action="home.html" class="flex-col">
+                    <h2>פרטי לקוח</h2>
+                    <label for="name">שם</label>
+                    <input type="text" name="name" id="name">
+                    <label for="phone">טלפון</label>
+                    <input type="tel" name="phone" id="phone" pattern="0\d{1,2}-\d{7}">
+                    <h2>צורת תשלום</h2>
+                    <div class="flex-col flex-space flex-grow-1">
+                        <label for="credit" class="radio-container flex-row">
+                            <input type="radio" name="payment" id="credit">
+                            <span class="checkmark"></span>
+                            <span class="flex-row flex-center">אשראי <i class="fa-regular fa-credit-card"></i></span>
+                        </label>
+                        <label for="cash" class="radio-container flex-row">
+                            <input type="radio" name="payment" id="cash">
+                            <span class="checkmark"></span>
+                            <span class="flex-row flex-center">מזומן <i class="fa-regular fa-money-bill-alt"></i></span>
+                        </label>
+                        <label for="bit" class="radio-container flex-row">
+                            <input type="radio" name="payment" id="bit">
+                            <span class="checkmark"></span>
+                            <span class="flex-row flex-center">ביט <i class="fa-brands fa-bitcoin"></i>
+                            </span>
+                        </label>
+                    </div>
+                    <h2>פרטי אשראי</h2>
+                    <label for="card-num"><i class="fa-regular fa-credit-card"></i> מספר אשראי</label>
+                    <input type="text" name="card-num" id="card-num" pattern="\d{20}">
+                    <label for="date"><i class="fa-regular fa-calendar-alt"></i> תאריך אחרון</label>
+                    <input type="date" name="date" id="date">
+                    <label for="three-digits"><i class="fa-solid fa-credit-card"></i> 3 ספרות</label>
+                    <input type="text" name="num" id="three-digits" pattern="\d{3}">
+                    <label for="id"><i class="fa-regular fa-id-card"></i> מספר זהות</label>
+                    <input type="text" name="id" id="id" pattern="\d{9}">
+                    <button>אישור</button>
+                </form>
+            </div>
+        </div>
+        <div class="flex-col flex-center">
+            <video src="../files/video/Blue Pastel Aesthetic Winter is Coming Animated Facebook Post (1) (2).mp4" loop
+                autoplay>
+            </video>
+        </div>
+    </main>
+</body>
+
+</html>

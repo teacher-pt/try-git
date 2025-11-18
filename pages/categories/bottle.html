@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bottle</title>
+  <link href="../../files/fontawesome/css/all.min.css" rel="stylesheet" />
+  <link href="../../css/style.css" rel="stylesheet" />
+  <link href="../../css/category.css" rel="stylesheet" />
+</head>
+
+<body class="flex-row flex-center">
+  <main class="flex-row half">
+    <div class="container flex-col flex-center flex-grow-1">
+      <div class="mySlides">
+        <div class="numbertext">1 / 4</div>
+        <img src="../../files/images/בקבוק באולינג.png" alt="בקבוק באולינג">
+      </div>
+      <div class="mySlides">
+        <div class="numbertext">2 / 4</div>
+        <img src="../../files/images/בקבוק ילדים.png" alt="בקבוק ילדים">
+      </div>
+      <div class="mySlides">
+        <div class="numbertext">3 / 4</div>
+        <img src="../../files/images/בקבוק פלסטיק.png" alt="בקבוק פלסטיק">
+      </div>
+      <div class="mySlides">
+        <div class="numbertext">4 / 4</div>
+        <img src="../../files/images/בקבוק כיסוי בד.png" alt="בקבוק כיסוי בד">
+      </div>
+      <div class="row flex-row">
+        <div class="column">
+          <img class="demo cursor" onclick="currentSlide(1)" src="../../files/images/בקבוק באולינג.png" alt="בקבוק באולינג">
+        </div>
+        <div class="column">
+          <img class="demo cursor" onclick="currentSlide(2)" src="../../files/images/בקבוק ילדים.png" alt="בקבוק ילדים">
+        </div>
+        <div class="column">
+          <img class="demo cursor" onclick="currentSlide(3)" src="../../files/images/בקבוק פלסטיק.png" alt="בקבוק פלסטיק">
+        </div>
+        <div class="column">
+          <img class="demo cursor" onclick="currentSlide(4)" src="../../files/images/בקבוק כיסוי בד.png" alt="בקבוק כיסוי בד">
+        </div>
+      </div>
+    </div>
+    <form class="flex-col">
+      <h1>שם מוצר</h1>
+      <div class="flex-col flex-space flex-grow-1">
+        <label for="bottle1" class="radio-container flex-row">
+          <input type="radio" name="p-name" id="bottle1">
+          <span class="checkmark"></span>
+          <span class="flex-col flex-center">בקבוק באולינג</span>
+        </label>
+        <label for="bottle2" class="radio-container flex-row">
+          <input type="radio" name="p-name" id="bottle2">
+          <span class="checkmark"></span>
+          <span class="flex-col flex-center">בקבוק ילדים</span>
+        </label>
+        <label for="bottle3" class="radio-container flex-row">
+          <input type="radio" name="p-name" id="bottle3">
+          <span class="checkmark"></span>
+          <span class="flex-col flex-center">בקבוק פלסטיק</span>
+        </label>
+        <label for="bottle4" class="radio-container flex-row">
+          <input type="radio" name="p-name" id="bottle4">
+          <span class="checkmark"></span>
+          <span class="flex-col flex-center">בקבוק כיסוי בד</span>
+        </label>
+      </div>
+      <div class="flex-col flex-center flex-grow-1">
+        <button type="button">הוסף לסל</button>
+      </div>
+    </form>
+  </main>
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("demo");
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
+  </script>
+</body>
+
+</html>
